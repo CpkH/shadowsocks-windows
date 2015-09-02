@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Net.Sockets;
 using System.Net;
 using Shadowsocks.Encryption;
@@ -587,6 +586,7 @@ namespace Shadowsocks.Controller
                         }
                         encryptor.Encrypt(connetionRecvBuffer, bytesRead, connetionSendBuffer, out bytesToSend);
                     }
+                    RequestStruct.ConvertToRequestStruct(connetionSendBuffer, bytesRead);
                     remote.BeginSend(connetionSendBuffer, 0, bytesToSend, 0, new AsyncCallback(PipeRemoteSendCallback), null);
 
                     IStrategy strategy = controller.GetCurrentStrategy();
