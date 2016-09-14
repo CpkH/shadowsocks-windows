@@ -52,6 +52,7 @@ namespace Shadowsocks.View
             checkAutoStartup.Text = I18N.GetString(checkAutoStartup.Text);
             checkRandom.Text = I18N.GetString(checkRandom.Text);
             CheckAutoBan.Text = I18N.GetString("AutoBan");
+            HttpPortLabel.Text = I18N.GetString("Http Port");
 
             Socks5ProxyGroup.Text = I18N.GetString(Socks5ProxyGroup.Text);
             CheckSockProxy.Text = I18N.GetString("Proxy On");
@@ -118,6 +119,7 @@ namespace Shadowsocks.View
                 _modifiedConfiguration.authPass = TextAuthPass.Text;
 
                 _modifiedConfiguration.autoban = CheckAutoBan.Checked;
+                _modifiedConfiguration.httpPort = int.Parse(HttpPortText.Text);
 
                 return ret;
             }
@@ -150,6 +152,7 @@ namespace Shadowsocks.View
             TextAuthPass.Text = _modifiedConfiguration.authPass;
 
             CheckAutoBan.Checked = _modifiedConfiguration.autoban;
+            HttpPortText.Text = _modifiedConfiguration.httpPort.ToString();
         }
 
         private void LoadCurrentConfiguration()

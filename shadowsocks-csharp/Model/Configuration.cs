@@ -232,6 +232,7 @@ namespace Shadowsocks.Model
         public string authUser;
         public string authPass;
         public bool autoban;
+        public int httpPort;
         //public bool buildinHttpProxy;
         private ServerSelectStrategy serverStrategy = new ServerSelectStrategy();
 
@@ -300,6 +301,10 @@ namespace Shadowsocks.Model
                 if (config.localPort == 0)
                 {
                     config.localPort = 1080;
+                }
+                if (config.httpPort == 0)
+                {
+                    config.httpPort = 8123;
                 }
                 // revert base64 encode for version 3.5.4
                 {

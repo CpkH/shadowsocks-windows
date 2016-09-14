@@ -88,7 +88,8 @@ namespace Shadowsocks.Controller
             {
                 Kill();
                 string polipoConfig = Resources.privoxy_conf;
-                _runningPort = this.GetFreePort();
+                // _runningPort = this.GetFreePort();
+                _runningPort = configuration.httpPort;
                 polipoConfig = polipoConfig.Replace("__SOCKS_PORT__", configuration.localPort.ToString());
                 polipoConfig = polipoConfig.Replace("__POLIPO_BIND_PORT__", _runningPort.ToString());
                 polipoConfig = polipoConfig.Replace("__POLIPO_BIND_IP__", configuration.shareOverLan ? "0.0.0.0" : "127.0.0.1");

@@ -66,6 +66,8 @@
             this.TTLLabel = new System.Windows.Forms.Label();
             this.TTLText = new System.Windows.Forms.TextBox();
             this.checkBuildinHttpProxy = new System.Windows.Forms.CheckBox();
+            this.HttpPortLabel = new System.Windows.Forms.Label();
+            this.HttpPortText = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.Socks5ProxyGroup.SuspendLayout();
@@ -103,6 +105,8 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.HttpPortLabel, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.HttpPortText, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.LabelRandom, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.RandomComboBox, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.CheckAutoBan, 1, 3);
@@ -110,12 +114,13 @@
             this.tableLayoutPanel2.Controls.Add(this.checkAutoStartup, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(343, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(169, 100);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(180, 128);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
             // LabelRandom
@@ -124,7 +129,7 @@
             this.LabelRandom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelRandom.Location = new System.Drawing.Point(3, 48);
             this.LabelRandom.Name = "LabelRandom";
-            this.LabelRandom.Size = new System.Drawing.Size(48, 28);
+            this.LabelRandom.Size = new System.Drawing.Size(59, 28);
             this.LabelRandom.TabIndex = 12;
             this.LabelRandom.Text = "Balance";
             this.LabelRandom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,7 +146,7 @@
             "LowException",
             "SelectedFirst",
             "Timer"});
-            this.RandomComboBox.Location = new System.Drawing.Point(57, 51);
+            this.RandomComboBox.Location = new System.Drawing.Point(68, 51);
             this.RandomComboBox.Name = "RandomComboBox";
             this.RandomComboBox.Size = new System.Drawing.Size(109, 22);
             this.RandomComboBox.TabIndex = 13;
@@ -150,7 +155,7 @@
             // 
             this.CheckAutoBan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CheckAutoBan.AutoSize = true;
-            this.CheckAutoBan.Location = new System.Drawing.Point(75, 79);
+            this.CheckAutoBan.Location = new System.Drawing.Point(86, 79);
             this.CheckAutoBan.Name = "CheckAutoBan";
             this.CheckAutoBan.Size = new System.Drawing.Size(73, 18);
             this.CheckAutoBan.TabIndex = 18;
@@ -160,7 +165,7 @@
             // checkRandom
             // 
             this.checkRandom.AutoSize = true;
-            this.checkRandom.Location = new System.Drawing.Point(57, 27);
+            this.checkRandom.Location = new System.Drawing.Point(68, 27);
             this.checkRandom.Name = "checkRandom";
             this.checkRandom.Size = new System.Drawing.Size(107, 18);
             this.checkRandom.TabIndex = 19;
@@ -170,7 +175,7 @@
             // checkAutoStartup
             // 
             this.checkAutoStartup.AutoSize = true;
-            this.checkAutoStartup.Location = new System.Drawing.Point(57, 3);
+            this.checkAutoStartup.Location = new System.Drawing.Point(68, 3);
             this.checkAutoStartup.Name = "checkAutoStartup";
             this.checkAutoStartup.Size = new System.Drawing.Size(101, 18);
             this.checkAutoStartup.TabIndex = 20;
@@ -549,6 +554,25 @@
             this.checkBuildinHttpProxy.UseVisualStyleBackColor = true;
             this.checkBuildinHttpProxy.Visible = false;
             // 
+            // HttpPortLabel
+            // 
+            this.HttpPortLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.HttpPortLabel.AutoSize = true;
+            this.HttpPortLabel.Location = new System.Drawing.Point(3, 107);
+            this.HttpPortLabel.Name = "HttpPortLabel";
+            this.HttpPortLabel.Size = new System.Drawing.Size(59, 14);
+            this.HttpPortLabel.TabIndex = 21;
+            this.HttpPortLabel.Text = "Http Port";
+            // 
+            // HttpPortText
+            // 
+            this.HttpPortText.Location = new System.Drawing.Point(68, 103);
+            this.HttpPortText.MaxLength = 10;
+            this.HttpPortText.Name = "HttpPortText";
+            this.HttpPortText.Size = new System.Drawing.Size(109, 22);
+            this.HttpPortText.TabIndex = 22;
+            this.HttpPortText.WordWrap = false;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -628,5 +652,7 @@
         private System.Windows.Forms.Label LabelAuthPass;
         private System.Windows.Forms.TextBox TextAuthUser;
         private System.Windows.Forms.Label LabelAuthUser;
+        private System.Windows.Forms.Label HttpPortLabel;
+        private System.Windows.Forms.TextBox HttpPortText;
     }
 }

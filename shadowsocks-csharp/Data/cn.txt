@@ -76,6 +76,7 @@ LowException=低错误优先
 SelectedFirst=选中优先
 Timer=定时切换
 AutoBan=自动禁用出错服务器
+Http Port=HTTP端口
 
 Remote proxy=二级（前置）代理
 Proxy On=开启二级（前置）代理
@@ -92,6 +93,8 @@ TTL=超时秒数
 
 OK=确定
 Cancel=取消
+
+Http Port=HTTP端口
 
 # ServerLog Form
 ServerLog=服务器记录
